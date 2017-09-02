@@ -2,11 +2,10 @@
   href: "/blog/"
 
 - title: "skydiving"
-  subcategories:
-    - subtitle: "posts"
-      subhref: "/skydiving/"
-    - subtitle: "photos"
-      subhref: "/skydiving/photos/"
+  href: "/skydiving/"
+
+- title: "photos"
+  href: "/skydiving/photos/"
 
 
 - title: "about"
