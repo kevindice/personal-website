@@ -1,0 +1,16 @@
+- title: "blog"
+  href: "/blog/"
+
+- title: "skydiving"
+  subcategories:
+    - subtitle: "posts"
+      subhref: "/skydiving/"
+    - subtitle: "photos"
+      subhref: "/skydiving/photos/"
+
+
+- title: "about"
+  href: "/about/"
+  
+- title: "contact"
+  href: "/contact/"
