@@ -22,29 +22,16 @@
         // Disable animations/transitions until the page has loaded.
             $body.addClass('is-loading');
 
-            if(!Cookies.get('inSession')) {
+            if(Cookies.get('inSession')) {
                 $body.removeClass('is-loading');
             } else {
-
-              var loadingPromise = Promise.all([
-                  new Promise(function(resolve, reject){
-                      $window.on('load', function() {
-                          resolve();
-                      });
-                  }),
-                  new Promise(function(resolve, reject){
-                      window.setTimeout(function(){ resolve(); }, 7450);
-                  })
-              ]).then(function(){
-                  window.setTimeout(function() {
-                      $body.removeClass('is-loading');
-                  }, 0);
-              });
+                window.setTimeout(function() {
+                    $body.removeClass('is-loading');
+                }, 7450);
             }
 
             var renewCookie = function(){
-                var inFiveMinutes = new Date(new Date().getTime() + 5 * 60 * 1000);
-                Cookies.set('inSession', 'true', { expires: inFiveMinutes });
+                Cookies.set('inSession', 'true');
             }
 
             renewCookie();
