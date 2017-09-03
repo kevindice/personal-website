@@ -20,8 +20,11 @@
             $body = $('body');
 
         // Disable animations/transitions until the page has loaded.
+            $body.addClass('is-loading');
+
             if(!Cookies.get('inSession')) {
-              $body.addClass('is-loading');
+                $body.removeClass('is-loading');
+            } else {
 
               var loadingPromise = Promise.all([
                   new Promise(function(resolve, reject){

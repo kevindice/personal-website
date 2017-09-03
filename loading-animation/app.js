@@ -107,7 +107,6 @@
     }),
 
     ApplicationView: Ember.View.extend({
-      templateName: 'application',
       showPermalink: function() {
         App.controls.set('showPermalink', !App.controls.get('showPermalink'))
       },
