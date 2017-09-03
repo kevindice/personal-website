@@ -20,28 +20,32 @@
             $body = $('body');
 
         // Disable animations/transitions until the page has loaded.
-            $body.addClass('is-loading');
+            if(!Cookies.get('inSession')) {
+              $body.addClass('is-loading');
 
-            var loadingPromise = Promise.all([
-                new Promise(function(resolve, reject){
-                    $window.on('load', function() {
-                        console.log('asdfasdf');
-                        resolve();
-                    });
-                }),
-                new Promise(function(resolve, reject){
-                        console.log('asdfasdf2');
-                    window.setTimeout(function(){ resolve(); }, 7450);
-                })
-            ]).then(function(){
-                        console.log('asdfasdf3');
+              var loadingPromise = Promise.all([
+                  new Promise(function(resolve, reject){
+                      $window.on('load', function() {
+                          resolve();
+                      });
+                  }),
+                  new Promise(function(resolve, reject){
+                      window.setTimeout(function(){ resolve(); }, 7450);
+                  })
+              ]).then(function(){
+                  window.setTimeout(function() {
+                      $body.removeClass('is-loading');
+                  }, 0);
+              });
+            }
 
-                window.setTimeout(function() {
-                        console.log('asdfasd4');
-                    $body.removeClass('is-loading');
-                }, 0);
-            });
+            var renewCookie = function(){
+                var inFiveMinutes = new Date(new Date().getTime() + 5 * 60 * 1000);
+                Cookies.set('inSession', 'true', { expires: inFiveMinutes });
+            }
 
+            renewCookie();
+            setInterval(renewCookie, 20000);
 
         // Touch mode.
             if (skel.vars.mobile)
