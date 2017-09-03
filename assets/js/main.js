@@ -22,11 +22,26 @@
         // Disable animations/transitions until the page has loaded.
             $body.addClass('is-loading');
 
-            $window.on('load', function() {
+            var loadingPromise = Promise.all([
+                new Promise(function(resolve, reject){
+                    $window.on('load', function() {
+                        console.log('asdfasdf');
+                        resolve();
+                    });
+                }),
+                new Promise(function(resolve, reject){
+                        console.log('asdfasdf2');
+                    window.setTimeout(function(){ resolve(); }, 7450);
+                })
+            ]).then(function(){
+                        console.log('asdfasdf3');
+
                 window.setTimeout(function() {
+                        console.log('asdfasd4');
                     $body.removeClass('is-loading');
                 }, 0);
             });
+
 
         // Touch mode.
             if (skel.vars.mobile)
