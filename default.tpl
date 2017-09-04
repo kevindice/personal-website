@@ -38,14 +38,14 @@
                     <nav id="nav">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/elements.html">Resume</a></li>
-                            <li>
+                            <li><a href="/kevin-dice-resume-2017-rev4.pdf">Resume</a></li>
+<!--                        <li>
                                 <a href="#">Skydiving</a>
                                 <ul>
                                     <li><a href="/left-sidebar.html">Photos</a></li>
                                     <li><a href="/right-sidebar.html">About</a></li>
                                     <li><a href="/no-sidebar.html">Parachute Rigging</a></li>
-                                    <!--<li>
+                                    <li>
                                         <a href="#">Submenu</a>
                                         <ul>
                                             <li><a href="#">Option 1</a></li>
@@ -53,9 +53,9 @@
                                             <li><a href="#">Option 3</a></li>
                                             <li><a href="#">Option 4</a></li>
                                         </ul>
-                                    </li> -->
+                                    </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="#" class="button special">Contact</a></li>
                         </ul>
                     </nav>

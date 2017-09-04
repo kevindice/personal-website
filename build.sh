@@ -6,6 +6,7 @@ cp -r --parents assets/fonts dist
 cp -r --parents assets/js dist
 cp -r --parents images dist
 cp -r --parents loading-animation dist
+cp *resume*.pdf
 for i in *.html; do
     [ -f "$i" ] || break
     echo "$i"
