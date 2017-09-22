@@ -38,7 +38,7 @@
                     <nav id="nav">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/kevin-dice-resume-2017-rev4.pdf">Resume</a></li>
+                            <li><a href="/kevin-dice-resume-2017-rev5.pdf">Resume</a></li>
 <!--                        <li>
                                 <a href="#">Skydiving</a>
                                 <ul>
